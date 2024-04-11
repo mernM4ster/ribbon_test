@@ -91,10 +91,7 @@ const StepPage = () => {
           })
           .catch(function (err) {
             console.log(err.name + ': ' + err.message);
-            const fileInput = document.createElement("input");
-            fileInput.capture = "capture";
-            fileInput.type = "file";
-            fileInput.accept = "image/*";
+            const fileInput = document.getElementById("photoTaker");
             fileInput.click();
   
             fileInput.addEventListener("change", (event) => {
