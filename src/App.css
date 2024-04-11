@@ -1,0 +1,11 @@
+.stretch-height {
+  height: 1000%;
+  height: -moz-available;
+  height: -wekbit-fill-available;
+  height: fill-available;
+  height: stretch;
+}
+
+.timer {
+  transform: translate(0, -104%);
+}
