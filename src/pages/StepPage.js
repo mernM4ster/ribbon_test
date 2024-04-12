@@ -76,7 +76,6 @@ const StepPage = () => {
   const handleFileChange = () => {}
 
   const handleInputClick = (e) => {
-    e.preventDefault();
     console.log("click")
     const video = videoRef.current;
     navigator.mediaDevices
