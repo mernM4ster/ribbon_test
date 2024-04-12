@@ -146,7 +146,7 @@ const StepPage = () => {
         <CustomButton width="w-full" isBlue title={STEPS[step].btn_title} func={goToNext} />
         <CustomButton width="w-full mt-4" title="Back" func={back} />
       </div>
-      <input id="photoTaker" type="file" accept="image/*" className="hidden" onChange={handleFileChange} onClick={handleInputClick} />
+      <input id="photoTaker" type="file" capture="capture" accept="image/*" className="hidden" onChange={handleFileChange} onClick={handleInputClick} />
     </div>
   )
 }
