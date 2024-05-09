@@ -3,6 +3,18 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import posthog from 'posthog-js';
+
+// Setup analytics/session tracking in prod
+// routes.js also has tracking code
+if (['prod', 'stg'].includes(process.env.REACT_APP_ENV)) {
+  posthog.init(
+    process.env.REACT_APP_POSTHOG_KEY, { 
+      api_host: "https://us.i.posthog.com"
+    }
+  )
+  console.log("PostHog initialized")
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
